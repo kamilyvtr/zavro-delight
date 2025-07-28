@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zavro Delights - Doceria Artesanal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="brigadeiro.png">
+    <!-- Google Fonts - Playfair Display e Montserrat para tipografia elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header fixo com navegação -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+              <!-- Logo da Zavro Delights -->
+<div class="logo">
+    <img src="WhatsApp Image 2025-07-22 at 18.47.46.jpeg" alt="Zavro Delights" class="logo-image">
+</div>
+                
+                <!-- Menu de navegação atualizado -->
+                <nav class="nav">
+                    <a href="#tradicionais" class="nav-link">Produtos </a>
+<a href="#especiais" class="nav-link"> Especiais</a>
+                    
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <!-- Botão do carrinho -->
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+   
+    <!-- Seção de Sabores Tradicionais -->
+    <section id="tradicionais" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Sabores Tradicionais</h2>
+            <div class="products-grid" id="tradicionalGrid">
+                <!-- Produtos tradicionais serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Sabores Especiais -->
+    <section id="especiais" class="products-section especiais">
+        <div class="container">
+            <h2 class="section-title">Sabores Especiais</h2>
+            <div class="products-grid" id="especialGrid">
+                <!-- Produtos especiais serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrinho lateral deslizante -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+            </div>
+            <div class="cart-empty" id="cartEmpty">
+                <p>Seu carrinho está vazio</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="finalizarPedido()" id="checkoutBtn" disabled>
+                <i class="fab fa-whatsapp"></i>
+                Finalizar Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay do carrinho -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<!-- Seção Call to Action Carrinho -->
+<section class="cta-cart-section">
+    <div class="container">
+        <div class="cta-cart-content">
+            <h2 class="cta-cart-title">Pronto para finalizar seu pedido?</h2>
+            <p class="cta-cart-subtitle">Confira os itens selecionados e envie seu pedido via WhatsApp</p>
+            <button class="cta-cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                Finalizar Compra
+                <span class="cart-badge" id="ctaCartCount">0</span>
+            </button>
+        </div>
+    </div>
+</section>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre a Zavro Delights</h2>
+                <p>Somos uma doceria artesanal especializada em criar momentos doces e especiais. Nossos produtos são feitos com ingredientes selecionados e muito carinho, garantindo qualidade e sabor únicos em cada mordida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Zavro Delights</h3>
+                    <p>Doceria Artesanal</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/5599984819161" target="_blank" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/zavro.delights?igsh=MW15MXNxeXN2ZHBtcA==" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+          <div class="footer-bottom">
+    <p>&copy; 2025 Zavro Delights. Todos os direitos reservados.</p>
+    <p class="made-with-love">Feito com <span class="heart">❤️</span> 
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
